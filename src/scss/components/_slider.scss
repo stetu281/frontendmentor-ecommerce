@@ -1,0 +1,57 @@
+.slider {
+  &__vb {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__img-container {
+    display: flex;
+    transition: transform 0.4s;
+
+    img {
+      width: 100%;
+      aspect-ratio: 16 / 13;
+      object-fit: cover;
+    }
+  }
+
+  &__nav {
+    width: 45px;
+    aspect-ratio: 1 / 1;
+    @extend %flex-center;
+    background-color: $white;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 100;
+
+    svg {
+      pointer-events: none;
+    }
+
+    path {
+      transition: stroke 0.4s;
+    }
+
+    &:hover {
+      path {
+        stroke: $orange;
+      }
+    }
+  }
+
+  &__prev {
+    left: 1.5rem;
+
+    img {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__next {
+    right: 1.5rem;
+  }
+}
