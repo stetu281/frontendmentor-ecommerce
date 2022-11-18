@@ -1,8 +1,19 @@
 .slider {
+  &__controls {
+    position: relative;
+  }
+
+  &__close-overlay {
+    display: none;
+  }
+
+  &__thumbs-container {
+    display: none;
+  }
+
   &__vb {
     width: 100%;
     overflow: hidden;
-    position: relative;
   }
 
   &__img-container {
@@ -17,7 +28,7 @@
   }
 
   &__nav {
-    width: 45px;
+    width: 46px;
     aspect-ratio: 1 / 1;
     @extend %flex-center;
     background-color: $white;
@@ -53,5 +64,103 @@
 
   &__next {
     right: 1.5rem;
+  }
+
+  @include breakpoint(768px) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($black, 0.7);
+
+    &__controls {
+      width: 60%;
+      max-width: 450px;
+    }
+
+    &__close-overlay {
+      width: 30px;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      top: -3rem;
+
+      svg {
+        width: 20px;
+        height: auto;
+      }
+
+      path {
+        fill: $white;
+        transition: fill 0.4s;
+      }
+
+      &:hover {
+        path {
+          fill: $orange;
+        }
+      }
+    }
+
+    &__thumbs-container {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-evenly;
+
+      img {
+        width: 100%;
+        border-radius: 0.5rem;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.5;
+        }
+      }
+    }
+
+    &__thumb-hover {
+      width: 20%;
+      max-width: 80px;
+      aspect-ratio: 1 / 1;
+      display: grid;
+      background-color: white;
+      border-radius: 0.5rem;
+
+      &[data-active-thumb="true"] {
+        border: 2px solid $orange;
+
+        img {
+          opacity: 0.2;
+        }
+      }
+    }
+
+    &__vb {
+      border-radius: 1rem;
+    }
+
+    &__img-container {
+      img {
+        aspect-ratio: 1 / 1;
+      }
+    }
+
+    &__nav {
+      width: 50px;
+      transform: translateY(-60px);
+    }
+
+    &__prev {
+      left: -25px;
+    }
+
+    &__next {
+      right: -25px;
+    }
   }
 }
