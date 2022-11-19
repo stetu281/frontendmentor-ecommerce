@@ -1,0 +1,18 @@
+.counter {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1rem;
+  @extend %flex-center;
+  justify-content: space-between;
+  background-color: $light-grayish-blue;
+
+  p {
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  button {
+    @extend %flex-center;
+    width: 40px;
+    aspect-ratio: 1 / 1;
+  }
+}
