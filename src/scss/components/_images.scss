@@ -1,0 +1,12 @@
+.images {
+  display: none;
+
+  @include breakpoint(768px) {
+    display: block;
+    width: 50%;
+
+    &__main {
+      width: 100%;
+    }
+  }
+}

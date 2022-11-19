@@ -1,0 +1,48 @@
+.description {
+  h2 {
+    margin-top: 1.5rem;
+    font-size: 0.825rem;
+    color: $orange;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin-top: 0.75rem;
+    font-size: 2rem;
+  }
+
+  &__para {
+    margin-top: 0.75rem;
+    line-height: 150%;
+    color: $dark-grayish-blue;
+  }
+
+  &__price-container {
+    margin-top: 1.75rem;
+    @extend %flex-center;
+    justify-content: space-between;
+  }
+
+  &__price {
+    font-size: 2rem;
+    color: $black;
+    font-weight: 700;
+  }
+
+  &__discount {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    color: $orange;
+    background-color: $pale-orange;
+    font-weight: 700;
+    transform: translateX(-2.5rem);
+  }
+
+  &__price-old {
+    color: $grayish-blue;
+    text-decoration: line-through;
+  }
+
+  @include breakpoint(768px) {
+  }
+}

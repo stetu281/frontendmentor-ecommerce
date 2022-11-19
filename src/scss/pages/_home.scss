@@ -1,0 +1,10 @@
+.product {
+  @include breakpoint(768px) {
+    display: flex;
+    align-items: center;
+
+    &__text {
+      width: 50%;
+    }
+  }
+}
