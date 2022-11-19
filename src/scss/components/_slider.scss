@@ -131,7 +131,7 @@
       background-color: white;
       border-radius: 0.5rem;
 
-      &[data-active-thumb="true"] {
+      &[data-activethumb="true"] {
         border: 2px solid $orange;
 
         img {
