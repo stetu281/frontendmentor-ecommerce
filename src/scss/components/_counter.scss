@@ -15,5 +15,9 @@
     @extend %flex-center;
     width: 40px;
     aspect-ratio: 1 / 1;
+
+    svg {
+      pointer-events: none;
+    }
   }
 }
