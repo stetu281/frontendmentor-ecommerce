@@ -1,0 +1,15 @@
+.cartbutton {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1.25rem;
+  @extend %flex-center;
+  gap: 1rem;
+  border-radius: 0.65rem;
+  background-color: $orange;
+  color: $white;
+  font-weight: 700;
+
+  path {
+    fill: $white;
+  }
+}

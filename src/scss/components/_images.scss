@@ -2,11 +2,36 @@
   display: none;
 
   @include breakpoint(768px) {
+    margin-top: 5rem;
     display: block;
-    width: 50%;
+    width: 100%;
+    max-width: 500px;
 
     &__main {
       width: 100%;
+      border-radius: 1rem;
+    }
+
+    &__thumb-container {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__thumb {
+      width: 20%;
+      aspect-ratio: 1 / 1;
+      border-radius: 0.5rem;
+
+      &[data-thumbactive="true"] {
+        opacity: 0.3;
+        border: 2px solid $orange;
+      }
+
+      &:hover {
+        opacity: 0.5;
+        border: 2px solid $orange;
+      }
     }
   }
 }

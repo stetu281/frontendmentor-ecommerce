@@ -1,5 +1,13 @@
 .product {
-  @include breakpoint(768px) {
+  padding-bottom: 5rem;
+  @extend %flex-center;
+  flex-direction: column;
+
+  &__text {
+    max-width: 500px;
+  }
+
+  @include breakpoint(1024px) {
     display: flex;
     align-items: center;
 
