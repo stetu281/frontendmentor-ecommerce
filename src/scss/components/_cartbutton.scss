@@ -9,6 +9,10 @@
   color: $white;
   font-weight: 700;
 
+  &:hover {
+    background-color: lighten($orange, 20%);
+  }
+
   path {
     fill: $white;
   }
