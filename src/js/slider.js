@@ -73,4 +73,11 @@ export const slider = () => {
         }%)`;
       }
     });
+
+  //close overlay
+  document
+    .querySelector(".slider__close-overlay")
+    .addEventListener("click", () => {
+      document.querySelector(".slider").classList.remove("slider--open");
+    });
 };
