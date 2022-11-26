@@ -34,4 +34,9 @@
       }
     }
   }
+
+  @include breakpoint(1024px) {
+    width: 45%;
+    margin-top: unset;
+  }
 }

@@ -1,12 +1,13 @@
 .counter {
   margin-top: 1.5rem;
-  padding: 0.75rem 1rem;
+  padding: 0 0.75rem;
   @extend %flex-center;
   justify-content: space-between;
   border-radius: 0.65rem;
   background-color: $light-grayish-blue;
 
   p {
+    padding: 1rem 0;
     font-weight: 700;
     font-size: 1.25rem;
   }
@@ -19,5 +20,10 @@
     svg {
       pointer-events: none;
     }
+  }
+
+  @include breakpoint(768px) {
+    margin-top: 0;
+    width: 35%;
   }
 }

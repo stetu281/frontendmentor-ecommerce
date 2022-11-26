@@ -43,6 +43,31 @@
     text-decoration: line-through;
   }
 
-  @include breakpoint(768px) {
+  @include breakpoint(1024px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    &__para {
+      margin-top: 1.5rem;
+    }
+
+    &__price-container {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    &__discount {
+      margin-left: 4rem;
+    }
+
+    &__price-old {
+      margin-top: 1rem;
+      width: 100%;
+    }
   }
 }
