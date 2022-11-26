@@ -1,7 +1,15 @@
 .header {
   padding: 1rem 0;
-  display: flex;
-  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  background-color: $white;
+  z-index: 15;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__left,
   &__right {

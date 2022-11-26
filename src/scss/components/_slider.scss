@@ -37,7 +37,7 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    z-index: 100;
+    z-index: 10;
 
     svg {
       pointer-events: none;
@@ -77,6 +77,7 @@
     align-items: center;
     background-color: rgba($black, 0.7);
     transition: left 0.4s;
+    z-index: 20;
 
     &--open {
       left: 0;
