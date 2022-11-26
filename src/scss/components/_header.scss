@@ -9,6 +9,7 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    position: relative;
   }
 
   &__left,
@@ -26,11 +27,30 @@
     margin-left: 0.75rem;
   }
 
+  &__btnNum {
+    display: none;
+
+    &--show {
+      display: block;
+      padding: 0.1rem 0.4rem;
+      position: absolute;
+      top: -2px;
+      right: 0;
+      border-radius: 20px;
+      background-color: $orange;
+      color: $white;
+      font-size: 0.55rem;
+      font-weight: 700;
+      z-index: 10;
+    }
+  }
+
   &__cartBtn {
     margin-right: 0.75rem;
     width: 30px;
     aspect-ratio: 1 / 1;
     @extend %flex-center;
+    position: relative;
 
     &:hover img {
       opacity: 1;
