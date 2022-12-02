@@ -3,13 +3,20 @@
   width: 95%;
   max-width: 420px;
   position: fixed;
-  top: 90px;
+  top: -500px;
   left: 0;
   right: 0;
+  opacity: 0;
   border-radius: 10px;
   background-color: $white;
   z-index: 12;
   box-shadow: 0px 10px 20px -5px lighten($black, 60%);
+  transition: top 0.5s, opacity 1s;
+
+  &--show {
+    top: 90px;
+    opacity: 1;
+  }
 
   &__title {
     margin: 1.5rem;
@@ -24,16 +31,22 @@
 
   &__dynamic-content {
     padding: 1.5rem;
-    ul {
-      li {
-        @extend %flex-center;
-        justify-content: space-between;
+  }
 
-        img {
-          width: 15%;
-          border-radius: 5px;
-        }
-      }
+  &__list {
+    li.cart__empty {
+      padding: 3rem 0;
+      justify-content: center;
+    }
+
+    li {
+      @extend %flex-center;
+      justify-content: space-between;
+    }
+
+    img {
+      width: 15%;
+      border-radius: 5px;
     }
   }
 
@@ -63,9 +76,14 @@
 
   &__btn {
     width: 10%;
+
+    svg {
+      pointer-events: none;
+    }
   }
 
   &__checkout-btn {
+    display: none;
     margin-top: 1.5rem;
     width: 100%;
     padding: 1.25rem;
@@ -82,8 +100,11 @@
   @include breakpoint(768px) {
     z-index: 15;
     position: absolute;
-    top: 65px;
     left: unset;
+
+    &--show {
+      top: 65px;
+    }
   }
 
   @include breakpoint(1400px) {

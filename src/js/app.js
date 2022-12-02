@@ -2,6 +2,7 @@ import css from "../scss/main.scss";
 import { slider } from "./slider";
 import { counter } from "./counter";
 import { images } from "./images";
+import { cart } from "./cart";
 
 const nav = document.querySelector(".nav");
 
@@ -16,3 +17,4 @@ document.querySelector(".nav__close-btn").addEventListener("click", () => {
 slider();
 counter();
 images();
+cart();
