@@ -16,26 +16,35 @@
       }
     }
 
-    &__thumb-container {
-      margin-top: 1.5rem;
+    &__thumbs-container {
+      margin-top: 2rem;
       display: flex;
       justify-content: space-between;
+
+      img {
+        width: 100%;
+        border-radius: 0.5rem;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.5;
+        }
+      }
     }
 
-    &__thumb {
+    &__thumb-hover {
       width: 20%;
+      max-width: 100px;
       aspect-ratio: 1 / 1;
+      display: grid;
+      background-color: white;
       border-radius: 0.5rem;
 
-      &[data-thumbactive="true"] {
-        opacity: 0.3;
+      &[data-activethumb="true"] {
         border: 2px solid $orange;
-      }
 
-      &:hover {
-        cursor: pointer;
-        opacity: 0.5;
-        border: 2px solid $orange;
+        img {
+          opacity: 0.2;
+        }
       }
     }
   }
