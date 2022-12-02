@@ -25,7 +25,6 @@ export const slider = () => {
 
           document.querySelectorAll(".slider__thumb-hover").forEach((item) => {
             item.dataset.activethumb = "false";
-            console.log(item.children);
             if (item.children[0].dataset.thumbid == i) {
               item.dataset.activethumb = "true";
             }
